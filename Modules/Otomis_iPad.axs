@@ -14,7 +14,8 @@
 
 
 DEFINE_DEVICE
-vdvBridge = 36002:1:1;	//Broadcast device
+vdvBridge = 36002:1:2;	//Broadcast device
+#WARN 'ON SITE: vdvBridge = 36002:1:2 ||| FOR LOCAL TEST vdvBridge = 36002:1:1 '	
 
 
 DEFINE_CONSTANT

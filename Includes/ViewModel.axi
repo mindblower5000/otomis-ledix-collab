@@ -366,9 +366,6 @@ DEFINE_FUNCTION UpdateRoomLeftMenuState(DEV dvTP, INTEGER ui_src_index)
 }
 
 
-
-
-
 DEFINE_FUNCTION ViewControl	(DEV dvTP, CHAR zone[], CHAR action_name[50], INTEGER etage, INTEGER act_index)
 {
 
@@ -737,9 +734,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_SS]
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
 	    
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
 	    
     }
     
@@ -747,9 +746,12 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_SS]
     {	
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_SS, GET_LAST(i_ch_Panel_SS))
-	   
-	    
+		
+		SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
     
     
@@ -766,16 +768,22 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_RDC]
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
 
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
+
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'"  
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'"  
     }
     
     RELEASE:
     {	
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_RDC, GET_LAST(i_ch_Panel_RDC))
+
+		SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'"  
 	    
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
 }
 
@@ -788,9 +796,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R1]
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
 	    
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
     }
     
     RELEASE:
@@ -798,7 +808,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R1]
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_R1, GET_LAST(i_ch_Panel_R1))
 		
+		SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)		
     } 
 }
 
@@ -811,9 +825,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R2]
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
 	    
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
     }
     
     RELEASE:
@@ -821,8 +837,12 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R2]
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_R2, GET_LAST(i_ch_Panel_R2))
 	   
+		SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
 	    debug(AMX_DEBUG, "'RELEASE:', ITOA(Button.Holdtime)")
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
 }
 
@@ -835,9 +855,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R3]
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
-	    
+		
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
+
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
     }
     
     RELEASE:
@@ -845,7 +867,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R3]
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_R3, GET_LAST(i_ch_Panel_R3))
 	   
+		SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
 }
 
@@ -858,9 +884,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R4]
 	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
+
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
 	    
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
     }
     
     RELEASE:
@@ -868,7 +896,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R4]
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_R4, GET_LAST(i_ch_Panel_R4))
 	   
-	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
+		UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
 }
 
@@ -883,8 +915,10 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R5]
 	    IF(Button.Holdtime > HOLD_TIME) //SET LOCK
 		HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] = Button.Holdtime
 	    
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
+
 	    //ALOW RELEASE in 1s after hold was pressed
-	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+	    //SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
     }
     
     RELEASE:
@@ -892,7 +926,11 @@ BUTTON_EVENT[TPTabPC, i_ch_Panel_R5]
 	    IF(HOLD_TIMER[GetDevIndex(BUTTON.INPUT.DEVICE)] <= HOLD_TIME)
 		ActivityTouchRouting(BUTTON.INPUT.DEVICE, Etage_R5, GET_LAST(i_ch_Panel_R5))
 	   
-	    UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+	    SEND_STRING vdvBridge,"'CAST=',DEV_TO_STRING(BUTTON.INPUT.DEVICE),'=CLR@Timers'" 
+		
+		UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, 0)
+
+		UpdateRoomLightBargraph(BUTTON.INPUT.DEVICE)
     } 
 }
 

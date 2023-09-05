@@ -239,7 +239,7 @@
 <SysID>0</SysID>
 <TransTCPIP>0.0.0.0</TransTCPIP>
 <TransSerial>COM1,115200,8,None,1,None</TransSerial>
-<TransTCPIPEx>192.168.2.101|1319|1|_Chelles_Otomis||</TransTCPIPEx>
+<TransTCPIPEx>192.168.165.139|1319|1|LE DIX R1 -  Parties Communes||</TransTCPIPEx>
 <TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
 <TransUSBEx>|||||</TransUSBEx>
 <TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
@@ -276,6 +276,10 @@
 </File>
 <File CompileType="Netlinx" Type="Include"><Identifier>ViewModel</Identifier>
 <FilePathName>Includes\ViewModel.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Include"><Identifier>Zones_Custom</Identifier>
+<FilePathName>Includes\Zones_Custom.axi</FilePathName>
 <Comments></Comments>
 </File>
 <File CompileType="Netlinx" Type="TP5"><Identifier>LE DIX - iPad Mini Supervision - 2266x1488</Identifier>
