@@ -113,6 +113,8 @@ CONSTANT INTEGER 	UI_SRC_L2_V_ANDROID	= 22     // 162
 CONSTANT INTEGER 	UI_SRC_L2_V_BS		= 23     // 163
 CONSTANT INTEGER 	UI_SRC_L2_V_BS2		= 24     // 164
 CONSTANT INTEGER 	UI_SRC_L2_V_MSHUB	= 25     // 165
+#WARN '02 Eiffel addon'
+CONSTANT INTEGER 	UI_SRC_L2_V_LOGO	= 26     // 166 
 
 CONSTANT INTEGER 	UI_SRC_L2_A_LEDIX	= 31     // 171
 CONSTANT INTEGER 	UI_SRC_L2_A_LEDIX2	= 32     // 172
@@ -123,11 +125,18 @@ CONSTANT INTEGER 	UI_SRC_L2_A_TV2		= 36     // 176
 CONSTANT INTEGER 	UI_SRC_L2_A_SON		= 37     // 177 //BrightSign Audio
 CONSTANT INTEGER 	UI_SRC_L2_A_SON2	= 38     // 178 //pcaudio shiseido, ecran
 CONSTANT INTEGER 	UI_SRC_L2_A_HOLO	= 39     // 179 
+ 
 
 CONSTANT INTEGER 	UI_SRC_L1_V_OFF		= 41    // 181	
 CONSTANT INTEGER 	UI_SRC_L1_A_OFF		= 42    // 182	
 CONSTANT INTEGER 	UI_SRC_L2_V_OFF		= 43    // 183	
 CONSTANT INTEGER 	UI_SRC_L2_A_OFF		= 44    // 184	
+
+#WARN '02 Eiffel addon'
+CONSTANT INTEGER 	UI_SRC_L1_V_EiffelTV_1	= 1  //191 Eiffel display 1 - main
+CONSTANT INTEGER 	UI_SRC_L1_V_EiffelTV_2	= 2  //192 Eiffel display 2 - door left
+CONSTANT INTEGER 	UI_SRC_L1_V_EiffelTV_3	= 3  //193 Eiffel display 3 - door right
+
 
 //PANEL ACTIVITIES 1001-1700
 CONSTANT INTEGER i_ch_Panel_SS [MAX_CHANNELS_PER_FLOOR]	= {1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100}
@@ -137,6 +146,9 @@ CONSTANT INTEGER i_ch_Panel_R2 [MAX_CHANNELS_PER_FLOOR]	= {1301,1302,1303,1304,1
 CONSTANT INTEGER i_ch_Panel_R3 [MAX_CHANNELS_PER_FLOOR]	= {1401,1402,1403,1404,1405,1406,1407,1408,1409,1410,1411,1412,1413,1414,1415,1416,1417,1418,1419,1420,1421,1422,1423,1424,1425,1426,1427,1428,1429,1430,1431,1432,1433,1434,1435,1436,1437,1438,1439,1440,1441,1442,1443,1444,1445,1446,1447,1448,1449,1450,1451,1452,1453,1454,1455,1456,1457,1458,1459,1460,1461,1462,1463,1464,1465,1466,1467,1468,1469,1470,1471,1472,1473,1474,1475,1476,1477,1478,1479,1480,1481,1482,1483,1484,1485,1486,1487,1488,1489,1490,1491,1492,1493,1494,1495,1496,1497,1498,1499,1500}
 CONSTANT INTEGER i_ch_Panel_R4 [MAX_CHANNELS_PER_FLOOR]	= {1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1514,1515,1516,1517,1518,1519,1520,1521,1522,1523,1524,1525,1526,1527,1528,1529,1530,1531,1532,1533,1534,1535,1536,1537,1538,1539,1540,1541,1542,1543,1544,1545,1546,1547,1548,1549,1550,1551,1552,1553,1554,1555,1556,1557,1558,1559,1560,1561,1562,1563,1564,1565,1566,1567,1568,1569,1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1580,1581,1582,1583,1584,1585,1586,1587,1588,1589,1590,1591,1592,1593,1594,1595,1596,1597,1598,1599,1600}
 CONSTANT INTEGER i_ch_Panel_R5 [MAX_CHANNELS_PER_FLOOR]	= {1601,1602,1603,1604,1605,1606,1607,1608,1609,1610,1611,1612,1613,1614,1615,1616,1617,1618,1619,1620,1621,1622,1623,1624,1625,1626,1627,1628,1629,1630,1631,1632,1633,1634,1635,1636,1637,1638,1639,1640,1641,1642,1643,1644,1645,1646,1647,1648,1649,1650,1651,1652,1653,1654,1655,1656,1657,1658,1659,1660,1661,1662,1663,1664,1665,1666,1667,1668,1669,1670,1671,1672,1673,1674,1675,1676,1677,1678,1679,1680,1681,1682,1683,1684,1685,1686,1687,1688,1689,1690,1691,1692,1693,1694,1695,1696,1697,1698,1699,1700}
+
+#WARN '03 Eiffel addon'
+CONSTANT INTEGER i_ch_Eiffel_TV [3]	= {191,192,193}
 
 
 //LEFT MENU 1-20 LEVEL 1
@@ -196,6 +208,11 @@ DEFINE_FUNCTION syncViewModel()
 }
 
 
+/*
+    Device: Left menu highlighting logic
+*/
+
+#WARN' 04 EIFFEL UPDATED UpdateRoomLeftMenuState'
 
 DEFINE_FUNCTION UpdateRoomLeftMenuState(DEV dvTP, INTEGER ui_src_index)
 {	
@@ -208,162 +225,196 @@ DEFINE_FUNCTION UpdateRoomLeftMenuState(DEV dvTP, INTEGER ui_src_index)
     //debug(AMX_DEBUG, "'RoomUpdateMenuState :: Zone ', ZONELIST[zone_id_to_show], ' SRC:',ZoneSourceSelected[zone_id_to_show]")
     
     //Building the state according to the selected source
-    
+ 	
     SWITCH(ZoneSourceSelectedVideo[zone_id_to_show])
     {
-	//VIDEO
-
+	//LEVELS SWITCH
+	
+	//VIDEo ------------------------
 	CASE 'Off'               :
 	{ 
 	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_OFF]] = true 		
 	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
 	}  
+
+	
 	CASE 'TNT'               :
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_TV]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_TV]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
 	}    
 	CASE 'ATV' 		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_ATV]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_ATV]] = true 
 	}
 	CASE 'Android' 		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_ANDROID]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_ANDROID]] = true 
 	}	
 	CASE 'BS'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS]] = true 
-	}	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS]] = true 
+		
+		
+	}
+	
 	CASE 'BS2'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS2]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS2]] = true 
 	}	
 	CASE 'PC'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PC]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PC]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
 	}
 	CASE 'Barco'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PRESENT]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_PRESENT]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
 	}
 	CASE 'HUB'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_MSHUB]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_MSHUB]] = true 
 	}
+	
+	#WARN '12 Eiffel addon'
+	CASE 'LOGO'		:
+	{ 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_LOGO]] = true 
+	}
+	
 	CASE 'CAM'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_CAM]] = true 		
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_CAM]] = true 		
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
 	}	     
+
+
 	CASE 'USB'		:
 	{ 
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_V_USB]] = true 		
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-	}
-	}
-	
-	SWITCH(ZoneSourceSelectedAudio[zone_id_to_show])
-    {    
-	//AUDIO ---------------------------
+	}	
+    }
 
+    SWITCH(ZoneSourceSelectedAudio[zone_id_to_show])
+    {    
+    
+			
+	//AUDIO ----------------------------------------
 	CASE 'Off'               :
 	{ 
 	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_OFF]] = true 		
 	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
 	} 
+	
 	CASE 'LeDix' 		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX]] = true 
 	}
 	CASE 'LeDix2' 		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX2]] = true
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX2]] = true
 	}
 
 	CASE 'PCAudio'          :
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
 	}
 	CASE 'BSAudio'		:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_BSAudio]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
 	}        
 	CASE 'Airplay'          :
 	{
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR]] = true 
 	}
 	CASE 'Airplay2' 	:
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR]] = true 
-	}	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR2]] = true 
+	}
+	
 	CASE 'BT'               :
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_BT]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_BT]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
 	}
+	
 	CASE 'RCA'               :
 	{ 
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_RCA]] = true 	
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
-	}
-	CASE 'TVE'              :
+	}		
+	CASE 'TVE'              : // Son de la TV Eiffel
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV2]] = true 
 	}
-	CASE 'TV'           : //Son de la TV
+	
+	CASE 'TV'              : //Son de la TV
 	{ 
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV]] = true 
 	}
-	CASE 'Son'              :
+	
+	CASE 'Son'              : //MIC, son salon Eiffel
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son2]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
 	}
-	CASE 'TVT'              :
+
+	CASE 'Son2'              : //MIC 2nd level Jardin, 
+	CASE 'SonT' 		: //Salle Tronquois
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV2]] = true
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
 	}
-	CASE 'SonT'             :
-	CASE 'Son2'         : //MIC 2nd level Jardin, 
-	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true
-	}
-	CASE 'SonE' 		: //Salle Eiffel 
+
+
+	CASE 'SonE' 		: //Salle Tronquois 
 	{ 
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
 		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
 	}
+			
+
+	CASE 'TVT'              :
+	{ 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV]] = true }
+		
 	CASE 'HOLO'             :
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_HOLO]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_HOLO]] = true 
 	}
+	
 	CASE 'Ecran'	        :
 	{ 
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-	    [dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
+		[dvTP, i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
 	}
+
     }
     
+    [TPTabPC, i_ch_Eiffel_TV[UI_SRC_L1_V_EiffelTV_1]]  = (isEnabledEiffelTV_1)
+    [TPTabPC, i_ch_Eiffel_TV[UI_SRC_L1_V_EiffelTV_2]]  = (isEnabledEiffelTV_2)
+    [TPTabPC, i_ch_Eiffel_TV[UI_SRC_L1_V_EiffelTV_3]]  = (isEnabledEiffelTV_3)   
+
 }
+
 
 
 DEFINE_FUNCTION ViewControl	(DEV dvTP, CHAR zone[], CHAR action_name[50], INTEGER etage, INTEGER act_index)
@@ -525,200 +576,24 @@ DEFINE_FUNCTION  ActivityTouchRouting(DEV dvTP, INTEGER etage, INTEGER activity_
 }
 
 
-
+#WARN '14 Eiffel Addon. Function refactoring.'
 /*
-    Prepare menu channels state for the zone active in iPad dependinf on user selected sources.
-    Channels are fixed for source. 
-    
-    Two levels of menu: //
-    See constants used.
-    
-    Level 1 
-    Level 2
+    All devices left menu update
 */
 DEFINE_FUNCTION syncMenuInAllDevices()
 {
     LOCAL_VAR INTEGER zone_id_to_show[EFFECTIVE_TP_NB]
     STACK_VAR INTEGER cx
 
-    #WARN 'ONLY 1st device is under sync... Put TP NB instead 1'
-    FOR(cx = 1; cx<=1 ;cx++)	//temp EFFECTIVE_TP_NB
+    //#WARN 'ONLY 1st device is under sync... Put TP NB instead 1'
+    FOR(cx = 1; cx<=EFFECTIVE_TP_NB ;cx++)	//temp EFFECTIVE_TP_NB
     {
+	UpdateRoomLeftMenuState(TPTabPC[cx],0)
 
-	IF(lastZoneSelectedInTP[cx])
-	{
-		zone_id_to_show[cx] = 0
-		zone_id_to_show[cx] = GetZoneIdByName(lastZoneSelectedInTP[cx])
-		
-		//debug(AMX_DEBUG, "'RoomUpdateMenuState :: Zone ', ZONELIST[zone_id_to_show[cx]], ' SRC:',ZoneSourceSelected[zone_id_to_show[cx]]")
-		
-		//Building the state according to the selected source
-		
-		SWITCH(ZoneSourceSelectedVideo[zone_id_to_show[cx]]) 		
-		{
-		//LEVELS SWITCH
-		
-		//VIDEo ------------------------
-		
-		CASE 'Off'               :
-		{ 
-			//OFF LEVEL 1
-			//OFF LEVEL 2
-		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_OFF]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		} 		
-		CASE 'TNT'               :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_TV]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		}    
-		CASE 'ATV' 		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_ATV]] = true 
-		}
-		CASE 'Android' 		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_PHONE]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_ANDROID]] = true 
-		}	
-		CASE 'BS'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS]] = true  
-		}		
-		CASE 'BS2'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_BS2]] = true 
-		}	
-		CASE 'PC'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_PC]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		}
-		CASE 'Barco'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_PRESENT]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		}
-		CASE 'HUB'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_ART]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_MSHUB]] = true 
-		}
-		CASE 'CAM'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_CAM]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		}	     
-		CASE 'USB'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_V_USB]] = true 		
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_V_OFF]] = true 
-		}	     
-		}
-
-		SWITCH(ZoneSourceSelectedAudio[zone_id_to_show[cx]]) 		
-		{
-		//LEVELS SWITCH
-		
-		//AUDIO ----------------------------------------
-		
-		CASE 'Off' 		:
-		{ 
-			//OFF LEVEL 1
-			//OFF LEVEL 2
-
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_OFF]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true  
-		}
-		CASE 'LeDix' 		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX]] = true 
-		}
-		CASE 'LeDix2' 		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_LEDIX]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_LEDIX2]] = true
-		}
-		CASE 'PCAudio'          :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
-		}
-		CASE 'BSAudio'		:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
-		}        
-		CASE 'Airplay'          :
-		{
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR]] = true 
-		}
-		CASE 'Airplay2' 	:
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_AIR]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_AIR2]] = true 
-		}		
-		CASE 'BT'               :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_BT]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
-		}		
-		CASE 'RCA'               :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_RCA]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_OFF]] = true 
-		}		
-		CASE 'TVE'          : // Son de la TV Eiffel
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV2]] = true 
-		}		
-		CASE 'TV'           : //Son de la TV
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV]] = true 
-		}		
-		CASE 'Son'          : //MIC, son salon Eiffel
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son2]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
-		}
-		CASE 'TVT'              :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_TV]] = true
-		}		
-		CASE 'SonT' 		: //Salle Tronquois
-		CASE 'Son2'         : //MIC 2nd level Jardin, 
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
-		}
-		CASE 'SonE' 		: //Salle Eiffel 
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON]] = true 
-		}
-		CASE 'HOLO'             :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_HOLO]] = true 
-		}
-		CASE 'Ecran'	        :
-		{ 
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L1_A_Son]] = true 	
-			[TPTabPC[cx], i_ch_LeftMenuSTATE[UI_SRC_L2_A_SON2]] = true 
-		}
-	}
-	}
-	}
+    }
 }	
+
+
 
 DEFINE_EVENT
 
@@ -942,6 +817,47 @@ BUTTON_EVENT[TPTabPC, i_ch_LeftMenuSTATE]
     {
 	    WAIT 2 UpdateRoomLeftMenuState(BUTTON.INPUT.DEVICE, GET_LAST(i_ch_LeftMenuSTATE))
 	    debug(AMX_DEBUG, "'Left menu selected index:', ITOA(GET_LAST(i_ch_LeftMenuSTATE))")
+    }
+}
+
+
+
+#WARN '05 Eiffel addon'
+
+BUTTON_EVENT[TPTabPC, i_ch_Eiffel_TV]
+{
+    PUSH:
+    {
+	    SWITCH(GET_LAST(i_ch_Eiffel_TV))
+	    {
+		CASE UI_SRC_L1_V_EiffelTV_1:{} //MAIN TV
+		
+		CASE UI_SRC_L1_V_EiffelTV_2: //TV2
+		{
+			    IF(isEnabledEiffelTV_2){
+				isEnabledEiffelTV_2 = false
+				EiffelTV2_Disconnect()
+			    }
+			    ELSE
+			    {
+				isEnabledEiffelTV_2 = true
+				EiffelTV2_Connect()
+			    }
+		}
+	    
+		CASE UI_SRC_L1_V_EiffelTV_3: //TV3
+		{
+			    IF(isEnabledEiffelTV_3){
+				isEnabledEiffelTV_3 = false
+				EiffelTV3_Disconnect()
+			    }
+			    ELSE
+			    {
+				isEnabledEiffelTV_3 = true
+				EiffelTV3_Connect()
+			    }		
+		}	    
+	    }
     }
 }
 
